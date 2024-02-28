@@ -1,0 +1,6 @@
+kivy~=2.2.1
+kivymd~=2.0.1.dev0
+asynckivy~=0.6.2
+requests~=2.31.0
+websockets~=12.0
+pillow~=10.2.0

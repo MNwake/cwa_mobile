@@ -1,0 +1,31 @@
+<ChipStack>
+    size_hint_x: 1
+    pos_hint: {'center_x': .5, 'center_y': .5}
+    MDExpansionPanelHeader:
+        MDListItem:
+            theme_bg_color: "Custom"
+            md_bg_color: app.theme_cls.secondaryContainerColor
+            ripple_effect: False
+            on_release: root.tap_expansion_chevron(root, chevron)
+
+            MDListItemSupportingText:
+                text: f'{root.text}:'
+
+            TrailingPressedIconButton:
+                id: chevron
+                icon: "chevron-right"
+                on_release: root.tap_expansion_chevron(root, chevron)
+
+    MDExpansionPanelContent:
+        id: panel_content
+        padding: "12dp", 0, "12dp", "12dp"
+        orientation: 'vertical'
+        size_hint: 1, None
+        height: '200dp'
+
+        MDStackLayout:
+            id: chip_stack
+            spacing: "12dp"
+            pos_hint: {'center_x':.5, 'center_y': .5}
+            halign: 'center'
+            adaptive_height: True

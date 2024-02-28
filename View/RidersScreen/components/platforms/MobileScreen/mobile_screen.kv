@@ -1,0 +1,56 @@
+<RidersMobileScreen>
+    md_bg_color: app.theme_cls.backgroundColor
+
+    MDBoxLayout:
+        id: box
+        orientation: 'vertical'
+
+        MDTopAppBar:
+            type: "small"
+
+            MDTopAppBarTitle:
+                text: '   Rankings'
+
+            MDTopAppBarTrailingButtonContainer:
+
+                MDActionTopAppBarButton:
+                    icon: "filter"
+                    on_release: root.toggle_bottom_sheet()
+
+        MDTabsPrimary:
+            id: tabs
+            pos_hint: {"center_x": .5, "center_y": .5}
+            allow_stretch: True
+            label_only: True
+            on_tab_switch: root.change_ranking_list(*args)
+
+            MDDivider:
+
+        MDRecycleView:
+            id: rv
+            key_viewclass: "viewclass"
+            key_size: "height"
+
+            RecycleBoxLayout:
+                padding: dp(10)
+                default_size: None, dp(120)
+                default_size_hint: 1, None
+                padding: 0, 0, 0, '84dp'
+                size_hint_y: None
+                height: self.minimum_height
+                orientation: "vertical"
+                spacing: '6dp'
+
+
+    BottomFilterSheet:
+        id: filter_sheet
+
+        adaptive_height: True
+        model: root.model
+        md_bg_color: app.theme_cls.secondaryContainerColor
+        on_filters: root.controller.update_rider_filters(self.filters)
+
+
+
+
+

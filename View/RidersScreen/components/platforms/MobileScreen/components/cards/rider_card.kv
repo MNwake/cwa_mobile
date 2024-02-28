@@ -1,0 +1,65 @@
+
+<RiderCard>:
+    md_bg_color: app.theme_cls.surfaceContainerColor
+    size_hint: 1, None
+    radius: 0
+    spacing: '12dp'
+    padding: '12dp', 0,0,0
+
+    MDBoxLayout:
+        size_hint_x: .1
+
+        MDLabel:
+            text: root.place
+            halign: 'center'
+            font_style: 'Title'
+            role: 'large'
+            bold: True
+            underline: True
+
+    MDBoxLayout:
+        size_hint_x: .2
+
+        RiderThumb:
+
+    MDBoxLayout:
+        orientation: 'vertical'
+        size_hint_x: .5
+        padding_y: '12dp'
+        adaptive_height: True
+        pos_hint: {'center_x': .5, 'center_y': .5}
+
+        MDLabel:
+            adaptive_height: True
+            text: f'{root.first_name} {root.last_name}'
+            halign: 'left'
+            font_style: 'Title'
+            role: 'large'
+            markup: True
+        MDLabel:
+            adaptive_height: True
+            text: root.division
+            halign: 'left'
+            font_style: 'Title'
+            role: 'small'
+            markup: True
+        MDLabel:
+            adaptive_height: True
+            text: f'National Rank: #{root.rank}'
+            halign: 'left'
+            font_style: 'Title'
+            role: 'small'
+            markup: True
+
+    MDBoxLayout:
+        orientation: 'vertical'
+        size_hint_x: .2
+        MDLabel:
+            text: root.score
+
+        MDLabel:
+            text: root.home_park
+
+
+
+

@@ -1,0 +1,32 @@
+<LiveFeedMobileScreen>
+    md_bg_color: app.theme_cls.backgroundColor
+    MDRelativeLayout:
+        id: box
+#        orientation: 'vertical'
+
+        MDCard:
+            pos_hint:{'center_x': .5, 'center_y': .6}
+            size_hint: 1, None
+            height: '200dp'
+
+            MDBoxLayout:
+                orientation: 'vertical'
+
+                MDBoxLayout:
+                    size_hint: 1, None
+                    height: '75dp'
+                    md_bg_color: 'white'
+
+                    RiderThumb:
+
+                MDBoxLayout:
+                    md_bg_color: 'green'
+
+        MDButton:
+            on_release: root.controller.async_button()
+            pos_hint:{'center_x': .5, 'center_y': .3}
+            MDButtonText:
+                text: 'Check data button'
+
+
+

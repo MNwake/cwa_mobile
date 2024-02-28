@@ -1,0 +1,21 @@
+<NetworkErrorScreen>:
+    pos_hint: {'center_x': .5, 'center_y': .5}
+
+    MDCard:
+        size_hint: .8, .6
+        orientation: 'vertical'
+        pos_hint: {'center_x': .5, 'center_y': .5}
+        md_bg_color: 'green'
+
+        MDRelativeLayout:
+
+            MDCircularProgressIndicator:
+                size_hint: None, None
+                size: "48dp", "48dp"
+                halign: 'center'
+                pos_hint: {'center_x': .5, 'center_y': .5}
+
+        MDLabel:
+            text: "Searhing for Network"
+            halign: 'center'
+            pos_hint: {'center_x': .5, 'center_y': .5}

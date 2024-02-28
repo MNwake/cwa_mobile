@@ -1,0 +1,1 @@
+from View.MainScreen.components.platforms.MobileScreen.components.bottom_nav_bar.bottom_nav_bar import BottomNavBar

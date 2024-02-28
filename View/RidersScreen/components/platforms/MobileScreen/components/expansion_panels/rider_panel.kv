@@ -1,0 +1,125 @@
+<CustomSlider>:
+
+    MDSliderHandle:
+
+    MDSliderValueLabel:
+
+
+<ExpansionPanelRider>:
+    MDExpansionPanelHeader:
+        MDListItem:
+            theme_bg_color: "Custom"
+            md_bg_color: self.theme_cls.secondaryContainerColor
+            ripple_effect: False
+            on_release: root.tap_expansion_chevron(root, chevron)
+
+            MDListItemSupportingText:
+                text: root.title
+                font_style: 'Title'
+                role: 'medium'
+
+            TrailingPressedIconButton:
+                id: chevron
+                icon: "chevron-right"
+                on_release: root.tap_expansion_chevron(root, chevron)
+
+    MDExpansionPanelContent:
+        orientation: "vertical"
+
+        md_bg_color: 'brown'
+
+        MDLabel:
+            text: "Select Age Range:"
+            font_style: "Label"
+            role: 'large'
+            padding_x: "16dp"
+            padding_y: "12dp"
+            adaptive_height: True
+
+        MDBoxLayout:
+            md_bg_color: 'yellow'
+            adaptive_height: True
+            MDLabel:
+                text: f'Min: {str(int(root.min_value))}'
+                adaptive_size: True
+                font_style: 'Label'
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                role: 'large'
+
+
+            CustomSlider:
+                id: min_slider
+                md_bg_color: 'blue'
+                tag: 'min'
+                step: 1
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                value: root.min_value
+                on_value: root.value_change(*args)
+                on_touch_up: root.release_slider(*args)
+
+        MDDivider:
+
+        MDBoxLayout:
+            md_bg_color: 'green'
+            spacing: '12dp'
+            adaptive_height: True
+
+            MDLabel:
+                text: f'Max: {str(int(root.max_value))}'
+                adaptive_width: True
+                font_style: 'Label'
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                role: 'medium'
+
+            CustomSlider:
+                id: max_slider
+                md_bg_color: 'purple'
+                tag: 'max'
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                step: 1
+                value: root.max_value
+                on_value: root.value_change(*args)
+                on_touch_up: root.release_slider(*args)
+
+        MDLabel:
+            adaptive_height: True
+            md_bg_color: 'red'
+            text: "Select Gender:"
+            font_style: "Label"
+            role: 'large'
+            padding_x: "16dp"
+            padding_y: "12dp"
+            pos_hint: {'center_x': .5, 'center_y': .5}
+
+        MDSegmentedButton:
+            adaptive_height: True
+            md_bg_color: 'white'
+
+            MDSegmentedButtonItem:
+
+                MDSegmentButtonLabel:
+                    text: 'All'
+            MDSegmentedButtonItem:
+                MDSegmentButtonLabel:
+                    text: 'Male'
+            MDSegmentedButtonItem:
+                MDSegmentButtonLabel:
+                    text: 'Female'
+
+        MDButton:
+            adaptive_height: True
+            md_bg_color: 'black'
+            style: "tonal"
+            theme_width: "Custom"
+            size_hint_x: .5
+            pos_hint: {"center_x": .5, "center_y": .5}
+            on_release: root.reset_to_defaults()
+            MDButtonIcon:
+                x: text.x - (self.width + dp(10))
+                icon: "restart"
+            MDButtonText:
+                id: text
+                text: "Reset"
+                pos_hint: {"center_x": .5, "center_y": .5}
+
+

@@ -1,0 +1,11 @@
+<MobileScreenView>
+
+    MDBoxLayout:
+        padding: 0, '48dp', 0, 0
+        id: screen
+
+    BottomNavBar:
+        id: bottom_nav_bar
+        on_switch_tabs: root.parent.switch_tabs(*args)
+
+

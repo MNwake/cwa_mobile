@@ -1,0 +1,36 @@
+
+<BottomFilterSheet>:
+    MDBottomSheetDragHandle:
+        drag_handle_color: "grey"
+
+        MDBottomSheetDragHandleTitle:
+            adaptive_height: True
+            text: "Filter Rankings"
+            font_style: 'Title'
+            role: 'small'
+            pos_hint: {"center_y": .5}
+
+        MDBottomSheetDragHandleButton:
+            icon: "close"
+            ripple_effect: False
+            on_release: root.set_state("toggle")
+
+    MDDivider:
+
+    MDList:
+        id: content_container
+        padding: 0, 0, 0, '84dp'
+        spacing: '12dp'
+
+
+
+
+
+
+
+
+
+
+
+
+
