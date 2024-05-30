@@ -13,9 +13,7 @@ Welcome to the Cable Wakeboard Competition App repository! This mobile applicati
 
 ### Prerequisites
 
-- Python 3.6+
-- Kivy 2.0+
-- Kivymd 0.104.2+
+- Python 3.8+
 - Other dependencies listed in `requirements.txt`
 
 ### Setup
@@ -40,38 +38,13 @@ Welcome to the Cable Wakeboard Competition App repository! This mobile applicati
 
 Upon launching the app, users will be greeted with a user-friendly interface, providing options to:
 
-- Register for a competition
 - View live scores and updates
-- Access competition schedules
-- Receive notifications for their events
+- View riders and rankings
+- Team Scores coming soon
 
-## Development
+## Disclaimer
 
-### Directory Structure
+This application is intended as a demonstration of software development skills and may not be fully functional. The current codebase is outdated. For a more updated and functional version of this application, please refer to "Cabled" available on the Apple App Store. The newer version has been completely rewritten in Swift to provide enhanced performance and features.
 
-- `main.py`: The main entry point of the application.
-- `models/`: Contains the data models for the app.
-- `views/`: Houses the UI components.
-- `controllers/`: Manages the logic and interaction between models and views.
-- `utils/`: Utility functions and helpers.
-- `requirements.txt`: List of dependencies required to run the app.
 
-### Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature-name`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin feature/your-feature-name`
-5. Submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any inquiries or support, please contact:
-
-- [Your Name](mailto:your.email@example.com)
+- [Theo Koester](mailto:theopkoester@icloud.com)
